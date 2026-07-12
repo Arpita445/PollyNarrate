@@ -43,3 +43,6 @@ AI-powered document narration system using Amazon Polly.
 
 ### Generated Audio / Speech Output
 ![Speech Generated](screenshots/speech-generated.png)
+
+### Generated Audio / Speech Output
+![Speech Generated](screenshots/speech-generated.png)
