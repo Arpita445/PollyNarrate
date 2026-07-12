@@ -2,6 +2,12 @@
 
 AI-powered document narration system using Amazon Polly.
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![AWS](https://img.shields.io/badge/AWS-Amazon%20Polly-orange)
+![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 ## Features
 - Upload PDF documents
 - Extract text from PDF
@@ -16,12 +22,12 @@ AI-powered document narration system using Amazon Polly.
 - Boto3
 - PyPDF
 
-## 🏗️ Architecture
+##  Architecture
 
 ![Architecture](screenshots/architecture.png)
 
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Home Page
 | Light Mode | Dark Mode |
