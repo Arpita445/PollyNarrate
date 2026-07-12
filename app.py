@@ -272,10 +272,32 @@ st.write("")
 
 voices = {
 
-    "Aditi - Indian English":"Aditi",
-    "Raveena - Indian English":"Raveena",
-    "Joanna - US English":"Joanna",
-    "Matthew - US English":"Matthew"
+    # English
+    "Aditi - Indian English 🇮🇳": "Aditi",
+    "Raveena - Indian English 🇮🇳": "Raveena",
+    "Joanna - US English 🇺🇸": "Joanna",
+    "Matthew - US English 🇺🇸": "Matthew",
+
+    # Hindi
+    "Kajal - Hindi 🇮🇳": "Kajal",
+
+    # French
+    "Lea - French 🇫🇷": "Lea",
+    "Mathieu - French 🇫🇷": "Mathieu",
+
+    # Spanish
+    "Lucia - Spanish 🇪🇸": "Lucia",
+    "Enrique - Spanish 🇪🇸": "Enrique",
+
+    # German
+    "Marlene - German 🇩🇪": "Marlene",
+    "Hans - German 🇩🇪": "Hans",
+
+    # Italian
+    "Bianca - Italian 🇮🇹": "Bianca",
+
+    # Japanese
+    "Mizuki - Japanese 🇯🇵": "Mizuki"
 
 }
 
