@@ -16,6 +16,11 @@ AI-powered document narration system using Amazon Polly.
 - Boto3
 - PyPDF
 
+## 🏗️ Architecture
+
+![Architecture](screenshots/architecture.png)
+
+
 ## 📸 Screenshots
 
 ### Home Page
@@ -41,3 +46,4 @@ AI-powered document narration system using Amazon Polly.
 
 ### Generated Audio / Speech Output
 ![Speech Generated](screenshots/speech-generated.png)
+
