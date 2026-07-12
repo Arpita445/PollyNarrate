@@ -58,7 +58,7 @@ AI-powered document narration system using Amazon Polly.
 ### Generated Audio / Speech Output
 ![Speech Generated](screenshots/speech-generated.png)
 
-## 🌟 Project Highlights
+##  Project Highlights
 
 - Built an AI-powered document narration system using Amazon Polly Text-to-Speech.
 - Implemented PDF text extraction using PyPDF.
