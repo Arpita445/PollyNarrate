@@ -11,23 +11,66 @@ polly_client = boto3.client(
 )
 
 
+def split_text(text, limit=2500):
+
+    chunks = []
+
+    words = text.split()
+
+    current = ""
+
+    for word in words:
+
+        if len(current) + len(word) < limit:
+
+            current += word + " "
+
+        else:
+
+            chunks.append(current)
+
+            current = word + " "
+
+
+    if current:
+
+        chunks.append(current)
+
+
+    return chunks
+
+
+
 def text_to_speech(text, voice_id):
 
-    response = polly_client.synthesize_speech(
-        Text=text,
-        OutputFormat="mp3",
-        VoiceId=voice_id,
-        Engine="standard"
-    )
+    chunks = split_text(text)
 
 
     audio_file = f"audio_{uuid.uuid4()}.mp3"
 
 
-    with open(audio_file, "wb") as f:
-        f.write(
-            response["AudioStream"].read()
-        )
+    with open(audio_file, "wb") as final_audio:
+
+
+        for chunk in chunks:
+
+
+            response = polly_client.synthesize_speech(
+
+                Text=chunk,
+
+                OutputFormat="mp3",
+
+                VoiceId=voice_id,
+
+                Engine="standard"
+
+            )
+
+
+            final_audio.write(
+                response["AudioStream"].read()
+            )
 
 
     return audio_file
