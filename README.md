@@ -3,7 +3,6 @@
 AI-powered document narration system using Amazon Polly.
 
 ## Features
-
 - Upload PDF documents
 - Extract text from PDF
 - Convert text into speech
@@ -11,7 +10,6 @@ AI-powered document narration system using Amazon Polly.
 - Download MP3 audio
 
 ## Tech Stack
-
 - Python
 - Streamlit
 - Amazon Polly
@@ -40,9 +38,6 @@ AI-powered document narration system using Amazon Polly.
 
 ### Generating Audio (Amazon Polly)
 ![Generating Audio](screenshots/generating-audio.png)
-
-### Generated Audio / Speech Output
-![Speech Generated](screenshots/speech-generated.png)
 
 ### Generated Audio / Speech Output
 ![Speech Generated](screenshots/speech-generated.png)
