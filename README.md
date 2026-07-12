@@ -8,6 +8,11 @@ AI-powered document narration system using Amazon Polly.
 ![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## 🚀 Live Demo
+
+[![Open App](https://img.shields.io/badge/Open%20PollyNarrate-Streamlit-red?style=for-the-badge)](https://pollynarrate-bsnezzj3mgsv8mskvpoi3m.streamlit.app/)
+
+
 ## Features
 - Upload PDF documents
 - Extract text from PDF
