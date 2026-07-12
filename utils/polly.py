@@ -1,42 +1,34 @@
 import boto3
+import streamlit as st
 import uuid
 
 
 polly_client = boto3.client(
     "polly",
-    region_name="ap-south-1"
+    region_name=st.secrets["AWS_REGION"],
+    aws_access_key_id=st.secrets["AWS_ACCESS_KEY"],
+    aws_secret_access_key=st.secrets["AWS_SECRET_KEY"]
 )
 
 
 def text_to_speech(text, voice_id):
 
-    max_length = 2500
+    response = polly_client.synthesize_speech(
+        Text=text,
+        OutputFormat="mp3",
+        VoiceId=voice_id,
+        Engine="standard"
+    )
 
-    chunks = [
-        text[i:i + max_length]
-        for i in range(0, len(text), max_length)
-    ]
 
-    audio_files = []
+    audio_file = f"audio_{uuid.uuid4()}.mp3"
 
-    for chunk in chunks:
 
-        response = polly_client.synthesize_speech(
-            Text=chunk,
-            OutputFormat="mp3",
-            VoiceId=voice_id,
-            Engine="standard"
+    with open(audio_file, "wb") as f:
+        f.write(
+            response["AudioStream"].read()
         )
 
-        audio_file = f"audio_{uuid.uuid4()}.mp3"
 
-        with open(audio_file, "wb") as file:
-            file.write(
-                response["AudioStream"].read()
-            )
-
-        audio_files.append(audio_file)
-
-
-    return audio_files[0]
+    return audio_file
     
