@@ -22,18 +22,14 @@ def split_text(text, limit=2500):
     for word in words:
 
         if len(current) + len(word) < limit:
-
             current += word + " "
 
         else:
-
             chunks.append(current)
-
             current = word + " "
 
 
     if current:
-
         chunks.append(current)
 
 
@@ -47,6 +43,44 @@ def text_to_speech(text, voice_id):
 
 
     audio_file = f"audio_{uuid.uuid4()}.mp3"
+
+
+    # Language mapping for voices
+    language_map = {
+
+        # Hindi / Indian English
+        "Aditi": "hi-IN",
+        "Raveena": "en-IN",
+
+        # English
+        "Joanna": "en-US",
+        "Matthew": "en-US",
+
+        # French
+        "Lea": "fr-FR",
+        "Mathieu": "fr-FR",
+
+        # Spanish
+        "Lucia": "es-ES",
+        "Enrique": "es-ES",
+
+        # German
+        "Marlene": "de-DE",
+        "Hans": "de-DE",
+
+        # Italian
+        "Bianca": "it-IT",
+
+        # Japanese
+        "Mizuki": "ja-JP"
+
+    }
+
+
+    language_code = language_map.get(
+        voice_id,
+        "en-US"
+    )
 
 
     with open(audio_file, "wb") as final_audio:
@@ -63,7 +97,9 @@ def text_to_speech(text, voice_id):
 
                 VoiceId=voice_id,
 
-                Engine="standard"
+                Engine="standard",
+
+                LanguageCode=language_code
 
             )
 
@@ -74,4 +110,5 @@ def text_to_speech(text, voice_id):
 
 
     return audio_file
+
     
