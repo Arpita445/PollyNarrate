@@ -280,8 +280,8 @@ voices = {
 
     
     # Hindi
-    "Aditi - Hindi 🇮🇳": "Aditi",,
-
+    "Aditi - Hindi 🇮🇳": "Aditi",
+    
     # French
     "Lea - French 🇫🇷": "Lea",
     "Mathieu - French 🇫🇷": "Mathieu",
