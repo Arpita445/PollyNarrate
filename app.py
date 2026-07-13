@@ -278,8 +278,9 @@ voices = {
     "Joanna - US English 🇺🇸": "Joanna",
     "Matthew - US English 🇺🇸": "Matthew",
 
+    
     # Hindi
-    "Kajal - Hindi 🇮🇳": "Kajal",
+    "Aditi - Hindi 🇮🇳": "Aditi",,
 
     # French
     "Lea - French 🇫🇷": "Lea",
@@ -300,6 +301,7 @@ voices = {
     "Mizuki - Japanese 🇯🇵": "Mizuki"
 
 }
+
 
 
 
